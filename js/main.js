@@ -4435,7 +4435,6 @@ function makeSlide(){
           };
           data = JSON.stringify(data);
           localStorage.setItem('movie1', data);
-          img.style.transform = 'scale(8)';
               setInterval(() => {
                 window.location.href ='detailpage.html';
               }, 300);

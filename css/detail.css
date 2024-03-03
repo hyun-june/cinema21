@@ -293,3 +293,7 @@ li a{
     max-width: 300px;
   }
 }
+
+.carousel-indicators{
+  z-index:0;
+}

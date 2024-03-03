@@ -140,7 +140,9 @@ body{
     border-radius: 10px;
     transition: transform 0.4s;
     box-shadow: 2px 1px 10px 2px rgba(0, 0, 0, 0.4);
+
 }
+
 
 .slide-image:hover {
     transform: scale(1.4);
@@ -335,6 +337,8 @@ h4 {
     width: 30px;
     height: 30px;
 }
+
+
 
 li a{
     text-decoration: none;
