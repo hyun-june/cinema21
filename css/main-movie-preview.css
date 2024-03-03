@@ -1,0 +1,147 @@
+.movie-preview {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    z-index: 7;
+}
+
+
+.movieSelection_wrap {
+    position: relative;
+    height: 498px;
+    background-color: #000;
+}
+
+.video_wrap:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image: linear-gradient(to right, #000 0%, rgba(0, 0, 0, 0.25) 25%, rgba(0, 0, 0, 0) 50%,rgba(0, 0, 0, 0.25) 75%, #000 100%);
+    z-index: 2;
+}
+
+
+.contents {
+    width: 980px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.video_wrap {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.video_wrap video {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: scale(1.35);
+    z-index: 1;
+}
+
+video {
+    object-fit: contain;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+
+.movieSelection_wrap .contents .movieSelection_title {
+    position: absolute;
+    top: 170px;
+    left: 0;
+    font-weight: 700;
+    font-size: 40px;
+    color: #fff;
+    line-height: 1.450em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.72);
+    z-index: 2;
+    /* animation: tt1 1s 3s ease-in forwards; */
+    pointer-events: none;
+}
+
+
+.movieSelection_txt {
+    display: -webkit-box;
+    overflow: hidden;
+    position: absolute;
+    top: 239px;
+    left: 0;
+    max-width: 100%;
+    font-size: 20px;
+    color: #fff;
+    line-height: 1.450em;
+    text-overflow: ellipsis;
+    z-index: 3;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    /* animation: tt2 1s 3s ease-in forwards; */
+    pointer-events: none;
+}
+
+
+.movieSelection_video_controller_wrap {
+    display: inline-flex;
+    position: absolute;
+    top: 315px;
+    left: 3px;
+    z-index: 4;
+    /* animation: tt 0.8s 3s ease-in forwards; */
+}
+
+
+.btn_movieSelection_detailView {
+    display: block;
+    padding: 5px 30px 5px 18px;
+    font-size: 14px;
+    color: #343434;
+    line-height: 1.429em;
+    background: rgba(255, 255, 255, 0.8) url(./../images/common/ico/arrowR_8x13.png) calc(100% - 11px) center/8px 13px scroll no-repeat;
+    border-radius: 15px;
+}
+
+.btn_movieSelection_playStop {
+    display: block;
+    margin-left: 10px;
+    width: 28px;
+    height: 28px;
+    font-size: 0;
+    background: transparent url(play.png) center/18px scroll no-repeat;
+    border: 1px solid #979797;
+    border-radius: 50%;
+}
+
+
+.btn_movieSelection_playStop.active {
+    background: transparent url(pause.png) center/18px scroll no-repeat;
+}
+
+.btn_movieSelection_soundOnOff {
+    display: block;
+    margin-left: 10px;
+    width: 28px;
+    height: 28px;
+    font-size: 0;
+    background: transparent url(soundOff.png) center/18px scroll no-repeat;
+    border: 1px solid #979797;
+    border-radius: 50%;
+}
+
+.btn_movieSelection_soundOnOff.active {
+    background: transparent url(soundOn.png) center/18px scroll no-repeat;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+    font-family: 'Noto Sans KR', 'CJONLYONENEW', '맑은 고딕', '돋움', Dotum, sans-serif;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    word-break: break-all;
+}

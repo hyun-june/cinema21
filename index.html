@@ -1,0 +1,237 @@
+<!-- 병권님 동현님 현준님 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main-movie-preview.css">
+    <link rel='stylesheet' href='css/style.css'>
+</head>
+
+<body>
+    <header class = "navbar-container container">    
+        <div class = "topNavbar"  id = "navbar" >
+            
+            
+
+            <h2 class = "LogoStyle" href = "index.html"><img class="Logo" src="img/cinema21.png" alt=""></h2>
+            <div class = "topNav-container">
+                
+                      
+
+                        <ul class="topNav">                        
+                            <li><div id="userWelcomeMessage" class="user-welcome"></div></li>
+                            <div id="login-signup" class="login-signup"></div>
+                    </ul>
+             </div>
+        </div>
+    </header>
+                
+                <div class="container-fluid"> 
+        <section class="container">
+           <nav class="navbar navbar-expand-lg">
+                    <!-- 이게 파란색으로 필드 만든 부분  -->
+            
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active current" aria-current="page" href="#">극장</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active current" aria-current="page" href="#">스토어</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active current" aria-current="page" href="#">이벤트</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active current" aria-current="page" href="#">혜택</a>
+                            </li>
+    
+                            <div class="search" role="search">
+                                <input class="search-input" placeholder="Search" aria-label="Search">
+                                <button class="btn" onclick="search()"><i class="fa-solid fa-magnifying-glass"></i></button> 
+                            </div>
+                            <li class="nav-item">
+                                <a class="nav-link reserve 영화예매" href="time.html">영화예매</a>
+                                
+                            </li>
+                           
+                        </ul>
+    
+                    </div>
+                </div>
+            </nav>
+ 
+
+    <div class=" movie-preview movieSelection_wrap">
+        <div id="ctl00_PlaceHolderContent_divMovieSelection_wrap" class="movieSelection_wrap">
+            <div class="contents">
+
+                <div class="video_wrap">
+                    
+                <video autoplay="" muted="">
+                    <source src="https://adimg.cgv.co.kr/images/202402/Tyrannosaurus/Tyrannosaurus_1080x608.mp4" type="video/mp4">
+                    이 브라우저는 Video 태그를 지원하지 않습니다. (Your browser does not support the video tag.)
+                </video>
+                
+                    <strong id="ctl00_PlaceHolderContent_AD_MOVIE_NM" class="movieSelection_title">아이엠 티라노</strong>
+                    <span id="ctl00_PlaceHolderContent_AD_DESCRIPTION_NM" class="movieSelection_txt">점박이를 잇는 공룡 애니메이션<br>3월 1일 Cinema 21 극장 대개봉</span>
+                    <div class="movieSelection_video_controller_wrap">
+              
+                        
+                        <a href="#none" id="ctl00_PlaceHolderContent_playStop" class="btn_movieSelection_playStop">Stop</a>
+                        <a href="#none" id="ctl00_PlaceHolderContent_soundOnOff" class="btn_movieSelection_soundOnOff">Sound On</a>
+
+                        <input name="ctl00$PlaceHolderContent$AD_CNT_URL" type="hidden" id="ctl00_PlaceHolderContent_AD_CNT_URL" value="http://ad.cgv.co.kr/NetInsight/imp/CGV/CGV_201401/main@MovieSelection2021?ads_id%3d50927%26creative_id%3d76272">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <section class="container">
+
+            <div class="container-fluids"> 
+                <section class="container">
+                   <nav class="navbar navbar-expand-lg mid-nav">
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                    <li class="nav-item">
+                                        <a class="nav-link active current" aria-current="page" href="#">상영영화</a>
+                                    </li>
+            
+                                    <li class="nav-item dropdown 표시순서">
+                                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                            aria-expanded="false">
+                                            표시순서
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <div class="dropdown-item 최신순" onclick="sortAndRender('최신순')">최신순</div>
+                                            </li>
+                                            <li>
+                                                <div class="dropdown-item 인기순" onclick="sortAndRender('인기순')">인기순</div>
+                                            </li>
+                                            <li>
+                                                <div class="dropdown-item 랜덤" onclick="sortAndRender('랜덤')">랜덤</div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                   
+                                </ul>
+            
+                            </div>
+                        </div>
+                    </nav>
+
+
+
+
+        <div class="slide-body">
+            <div style="overflow:hidden">
+                <div class="movie1">
+                    상영영화 공간
+                </div>
+            </div>
+        </div>
+        
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">글로벌</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <div class="nav-link active korea" aria-current="page" onclick="getCountryMovies('ko')">한국영화
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="nav-link us" onclick="getCountryMovies('en')">외국영화</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="movie2 container">
+            한국영화 및 외국영화 공간
+        </div>
+
+<div>
+    <div id="newsbanner">
+    <h5 class="newsnav">News</h5></div>
+    <div class="container">
+        <div class="row" id="news-container"></div>
+        <div id="sliderControls">
+            <button id="prevBtn"></button>
+            <button id="nextBtn"></button>
+        </div>
+</div>
+
+    </section>
+
+    <section class = "p-5 mt-5 mb-5">
+
+    </section>
+
+    <footer class = "footer-container">
+    <div>
+            <iframe 
+                src="https://ad.cgv.co.kr/NetInsight/html/CGV/CGV_201401/main@Bottom" 
+                width="100%" height="140" title="" frameborder="0" 
+                scrolling="no" marginwidth="0" marginheight="0" name="Bottom" id="Bottom">
+            </iframe>
+        </div>
+        <ul class = "footerbar-list">
+            <li>회사소개</li>
+            <li>채용정보</li>
+            <li>이용약관</li>
+            <li>편성기준</li>
+            <li>개인정보처리방침</li>
+            <li>윤리경영</li>
+        </ul>
+        <div class = "footerP">
+            <p>(04377)서울특별시 용산구 한강대로 23길 55, 아이파크몰 6층(한강로동)
+                대표이사
+                허민회
+                사업자등록번호
+                104-81-45690
+                통신판매업신고번호
+                2017-서울용산-0662 사업자정보확인
+                호스팅사업자
+                CJ올리브네트웍스
+                개인정보보호 책임자
+                도형구
+                대표이메일
+                cjcgvmaster@cj.net
+                © CJ CGV. All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src='js/main.js'></script>
+    <script src="js/main2.js"></script>
+    <script src="js/main-movie-preview.js"></script>
+    <script src="https://kit.fontawesome.com/a1a9dc0480.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

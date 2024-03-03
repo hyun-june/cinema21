@@ -1,0 +1,632 @@
+/* 메인페이지 css 현준,동현,병권님  이름 밑에가 각 css입니다.*/ 
+body{
+    font-family: 'Noto Sans KR', 'CJONLYONENEW', '맑은 고딕', '돋움', Dotum, sans-serif;
+}
+
+.Logo{
+    width: 180px;
+    margin-top: 20px;
+    margin-left: 8em;
+    margin-bottom: 2rem;
+}
+
+.nav-link{
+    width: 80px;
+    height: 24px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.nav-item{
+    width: 100px;
+    }
+
+.nav-item:hover{
+    background-color: darkgoldenrod;
+    font-weight: bolder;
+    border: none;
+    border-radius:0.5rem;
+}
+
+.표시순서:hover, .최신순:hover, .인기순:hover,
+.랜덤:hover,.korea:hover, .us:hover{
+    font-weight: bold;
+    background-color: lightgray;
+}
+
+#navbar.scrolled {
+    background-color: white;
+  }
+
+
+/* 채연 -병권님+동현님  css 합치는 것 정리  */
+
+.container-fluid {
+    
+    padding: 10px;
+    opacity: 0.8;
+    border-top: 4px solid rgb(105, 72, 10); 
+    border-bottom: 4px solid rgb(158, 120, 50); ;
+    padding: 10px;
+    opacity: 0.8;
+}
+
+.container-fluids{
+     padding: 10px;
+    opacity: 0.8;
+    border-top: 4px solid rgb(105, 72, 10); 
+    border-bottom: 4px solid rgb(158, 120, 50); ;
+    padding: 10px;
+    opacity: 0.8;
+    margin-top: 2rem;
+    
+}
+
+
+
+.ongoingsnav{ 
+    background-color: rgb(255,181,43);
+    padding: 15px;
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    
+
+}
+
+
+
+
+.newsnav{  
+    border-top: 4px solid rgb(105, 72, 10); 
+    border-bottom: 4px solid rgb(158, 120, 50); ;
+    padding: 20px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    /* border-top-left-radius: 10px; */
+ 
+    font-size: 20px;
+}
+.contents {
+    width: 980px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    
+    /* justify-content: flex-end; */
+    /* padding-left: 14rem; */
+}
+
+.search-input {
+    flex-grow: 1; /* 입력란이 가능한 최대 너비를 가질 수 있도록 설정합니다. */
+    min-width: 0; /* 최소 너비를 0으로 설정하여 입력란이 가로로 최대한 늘어날 수 있도록 합니다. */
+    /* margin-left: 600px; */
+    border-style: none;
+    background-color: #fff6d8;
+    margin-left: 45rem;
+    outline: none;
+    height: 39px;
+    width: 12.5rem;
+    font-size: 14px;
+    font-weight: bold;
+    
+}
+
+.slide-body {
+    width: 1200px;
+    display: flex;
+    justify-content: center;
+}
+
+.movie1 {
+    height: 470px;
+    margin-left: 0;
+    position: relative;
+    display: flex;
+    justify-content: start;
+    transition: transform 0.8s ease;
+}
+
+
+.slide-image {
+    margin-top: 70px;
+    width: 70%;
+    height: 300px;
+    border-radius: 10px;
+    transition: transform 0.4s;
+    box-shadow: 2px 1px 10px 2px rgba(0, 0, 0, 0.4);
+}
+
+.slide-image:hover {
+    transform: scale(1.4);
+    box-shadow: 0 2 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+input {
+    width: 120px;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+
+.nav-item {
+    font-weight: bold;
+    padding-left: 30px;
+   padding: 0 10px;
+   
+   
+
+}
+
+/* .card {
+    transition: all .6s;
+    box-shadow: 2px 1px 10px 2px rgba(0, 0, 0, 0.4);
+    margin-bottom: 5px;
+}
+
+.card:hover {
+    transform: scale(1.3);
+    z-index: 2;
+    box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.6);
+} */
+
+.movie2 {
+    width: 45vw;
+    display: flex;
+    justify-content: center;
+    gap: 4em;
+}
+
+img {
+    border-radius: 10px;
+}
+
+.flip-card {
+    width: 260px;
+    height: 430px;
+    text-align: center;
+    perspective: 1000px;
+    display: inline-block;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: inherit;
+    height: 100%;
+    transition: 0.5s ease-in-out;
+    transform-style: preserve-3d;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front {
+    z-index: 2;
+    border-radius: 10px;
+}
+
+.flip-card-back {
+    z-index: 1;
+    transform: rotateY(180deg);
+    border-radius: 10px;
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    backface-visibility: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.flip-card-back p {
+    text-align: left;
+    padding: 0 30px;
+    box-sizing: border-box;
+    margin-top: 5px;
+}
+
+h4 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.info-link {
+    display: block;
+    /*좌우 텍스트 공간만 차지*/
+    text-align: center;
+    margin: 10px auto;
+    background-color: #000;
+    color: #fff;
+    border-radius: 5px;
+    padding: 5px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.3s;   
+    
+
+}
+
+.info-link:hover {
+    background-color: dodgerblue;
+}
+
+#img1 {
+    width: 99.8%;
+    height: 99.8%;
+    object-fit: cover;
+}
+
+#img2 {
+    width: 99.8%;
+    height: 160px;
+}
+
+
+
+.disabled {
+    opacity: 0.3;
+}
+
+
+/* 동현님 css */
+
+
+.navbar-container {
+    font-family: 'Noto Sans KR', 'CJONLYONENEW', '맑은 고딕', '돋움', Dotum, sans-serif;
+    font-size: 100%;
+   
+}
+
+.topNav{
+     float: right;
+     padding: 20px;
+    padding-top: 20px;
+}
+
+    
+.topNavbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.topNav li img {
+    width: 30px;
+    margin-right: 30px; /* 아이콘과 텍스트 사이의 간격을 조정합니다. */
+    margin-left: 10px;
+}
+
+.topNav li span {
+    padding:0 15 0 0px;
+    
+}
+
+.LogoStyle {
+    cursor: pointer;
+    margin-left: -8rem;
+}
+
+
+.topNav {
+    display: flex;
+    justify-content: center;
+    width: 60%;
+}
+
+.topNav li {
+    display: flex;
+    align-items: center; /* 아이콘과 텍스트를 수직 가운데 정렬합니다. */
+    padding: 1rem;
+}
+
+.topNav li img {
+    width: 30px;
+    height: 30px;
+}
+
+li a{
+    text-decoration: none;
+    color: black;
+}
+
+.footer-container {
+    width: 100%;
+    
+    font-size: 100%;
+    margin: 0 auto;
+    padding: 0;
+    border: 0;
+    background-color: black;
+    color: azure;
+    font-size: small;
+}
+
+.footerbar-list {
+    max-width: 980px;
+    margin-left: 3rem;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    border-bottom: 2px dashed aliceblue;
+    padding-bottom: 1rem;
+
+}
+
+.footerP {
+    width: 50%;
+    margin-left: 3rem;
+    padding-bottom: 1rem;
+
+}
+
+
+/* 새로운 CSS 코드 추가 */
+.container{
+    position: relative;
+}
+
+.card {
+    width: 100%;
+    height: 22em;
+    padding: 0.5em;
+    background-color: white;
+    transition: transform 0.3s ease;
+}
+
+
+.card:hover {
+    transform: scale(1.15); /* 호버 시에 카드를 약간 확대합니다. */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 25px; /* 그림자를 더 크게 만듭니다. */
+    z-index: 1; /* 다른 요소 위에 나타나도록 설정합니다. */
+}
+
+.card-img-top {
+    width: 100%;
+    height: 200px; /* 모든 이미지의 높이를 200px로 고정합니다. */
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.card-title {
+    font-size: 15px; /* 타이틀의 폰트 크기를 16px로 설정합니다. */
+    width: 100%;
+    height: 80px;
+
+}
+
+.card-body {
+    background-color: transparent;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    position: relative;
+    padding-bottom: 0px;
+}
+
+.card-text {
+    border-top: 2px solid lightcoral;
+    font-size: 13px;
+    text-align: right;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.btn {
+    font-size: 18px;
+    border-style: none;
+    color: black;
+}
+.btn:hover{
+    border: 1px solid darkgoldenrod;
+    background-color: darkgoldenrod ;
+    border-radius: 0.5rem;
+}
+
+.col-md-2:nth-child(n+7) {
+    display: none; /* 7번째부터 숨김 */
+}
+
+#sliderControls {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 10em;
+    display: flex; /* 버튼을 가로로 나란히 배치하기 위해 Flexbox를 사용합니다. */
+    justify-content: space-between; /* 버튼 사이의 간격을 최대한 벌립니다. */
+    width: 100%;
+}
+
+#prevBtn {
+    position: relative;
+    right: 30px; /* 왼쪽으로 10px 이동 */
+}
+
+#nextBtn {
+    position: relative;
+    left: 30px; /* 오른쪽으로 10px 이동 */
+}
+
+
+#prevBtn,
+#nextBtn {
+    /* 기존 스타일 유지 */
+    border-radius: 50%;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 40px;
+    width: 40px;
+    height: 40px;
+    display: flex; /* 요소를 플렉스 박스로 설정하여 내부 요소를 가운데 정렬합니다. */
+    justify-content: center; /* 수평 가운데 정렬 */
+    align-items: center; /* 수직 가운데 정렬 */
+    position: relative;
+    z-index: 9999;
+    opacity: 0.6;
+    font-weight: bold;
+    padding: 0px;
+}
+#prevBtn::before,
+#nextBtn::before {
+    content: ''; /* 가상 요소를 추가하여 버튼 내부에 아이콘을 대신합니다. */
+    position: absolute;
+    top: 50%; /* 부모 요소의 상단 기준으로 수직 가운데 정렬 */
+    left: 50%; /* 부모 요소의 왼쪽 기준으로 수평 가운데 정렬 */
+    transform: translate(-50%, -55%); /* 수직과 수평 가운데 정렬 */
+    font-size: 24px; /* 아이콘 크기 조정 */
+}
+
+
+#prevBtn::before {
+    content: '<'; /* 왼쪽 화살표 표시 */
+    font-size: 40px;
+}
+
+#nextBtn::before {
+    content: '>'; /* 오른쪽 화살표 표시 */
+    font-size: 40px;
+}
+
+
+
+#prevBtn:hover,
+#nextBtn:hover{
+    background-color: lightgrey;
+
+}
+
+
+#prevBtn {
+    margin-right: auto; /* 왼쪽에 붙이도록 설정합니다. */
+}
+
+#nextBtn {
+    margin-left: auto; /* 오른쪽에 붙이도록 설정합니다. */
+}
+
+/* 992px 이하에서는 3번째부터 숨깁니다. */
+@media (max-width: 1399px) {
+    .card {
+        overflow-wrap: break-word; /* 텍스트가 요소의 경계를 넘어갈 때 줄 바꿈 처리 */
+        height: auto 
+    }
+    .card-title {
+        overflow: hidden;
+        white-space: normal; /* 텍스트 자동 줄바꿈 허용 */
+        text-overflow: ellipsis; /* 넘치는 텍스트에 ... 표시 */
+    }
+    
+}
+
+@media (max-width: 1199px) {
+    .card-title {
+        overflow: hidden;
+        white-space: normal; /* 텍스트 자동 줄바꿈 허용 */
+        text-overflow: ellipsis; /* 넘치는 텍스트에 ... 표시 */
+    }
+}
+
+
+@media (max-width: 992px) {
+    .card{
+        width: 130px;
+        height: auto; 
+    }
+    .col-md-2:nth-child(n+6) {
+        display: none;
+    }
+
+}
+
+/* 768px 이하에서는 2번째부터 숨깁니다. */
+@media (max-width: 768px) {
+    .card{
+        width: 130px;
+        height: auto; 
+    }
+    .col-md-2:nth-child(n+5) {
+        display: none;
+    }
+}
+
+
+    .user-welcome {
+        
+        font-size: 18px;
+        font-family:Arial, Helvetica, sans-serif;
+        white-space: nowrap; /* 한 줄로 표시되도록 설정 */
+        overflow: hidden; 
+    
+    }
+    
+
+    .footer-container {
+        width: 100%;
+        font-size: 100%;
+        margin: 0 auto;
+        padding: 0;
+        border: 0;
+        background-color: black;
+        color: azure;
+        font-size: small;
+    }
+    
+    .footerbar-list {
+        width: 60%;
+        max-width: 980px;
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        border-bottom: 2px dashed aliceblue;
+        padding-bottom: 1rem;
+        margin: auto;
+        letter-spacing: 3px;
+    
+    }
+    
+    .footerP {
+        width: 60%;
+        margin-left: 3rem;
+        padding-bottom: 1rem;
+        margin: auto;
+        letter-spacing: 3px;
+    
+    }
+    
+    /* 768px 미만일 때 스타일 조정 /
+    @media (max-width: 768px) {
+        .footerbar-list {
+            width: 90%; / 전체 너비의 90%로 축소 /
+            margin-left: auto; / 왼쪽 마진을 자동으로 채워서 가운데 정렬 /
+            margin-right: auto; / 오른쪽 마진을 자동으로 채워서 가운데 정렬 /
+        }
+    
+        .footerP {
+            width: 90%; / 전체 너비의 90%로 축소 /
+            margin-left: auto; / 왼쪽 마진을 자동으로 채워서 가운데 정렬 /
+            margin-right: auto; / 오른쪽 마진을 자동으로 채워서 가운데 정렬 */
+
+
+
+
+
+
+
+
+            /* header list */
+            .login-signup{
+                display: flex;
+                list-style-type: none; /* 리스트 스타일 제거 */
+            }

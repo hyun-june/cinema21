@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CINEMA21 영화시간표</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel='stylesheet' href='css/time.css'>
+
+</head>
+
+<body>
+    <header class = "navbar-container container">    
+        <div class = "topNavbar">
+            <h2 class = "LogoStyle"><a href="index.html"><img class="Logo" src="img/cinema21.png" alt=""></a></h2>
+            <div class = "topNav-container">
+                <ul class="topNav">                        
+                    <li><div id="userWelcomeMessage" class="user-welcome"></div></li>
+                    <div id="login-signup" class="login-signup"></div>
+            </ul>
+             </div>
+        </div>
+    </header>
+    <section class="container">
+        <div class="navbar">
+            <span id="time">영화시간표</span>
+        </div>
+    </section>
+
+    <div class="container time">
+        <div class="col-times">
+            <img src="img/듄파트2.jpg" alt="" class="timeimage">
+        </div>
+        <div class="info-movie">
+            <span class="i12">12</span>
+            <span class="title">듄-파트2</span>
+            <span class="etc"><br>166분 / 2024.02.28 개봉</span>
+            <span class="onair">상영중</span>
+        </div>
+        <div class="type-hall">
+            <div class="info-hall">
+                <span class="room">▶ SCREENX 2D</span>
+                <span>| 4관[SCREENX] 8층</span>
+                <span>| 총 124석</span>
+            </div>
+            <div class="info-timetable">
+                <ul class="seats">
+                    <li>
+                        <div class="seat 4관" onclick="chooseSeat(event)">
+                            <div class="clock">09:40</div>
+                            <div class="no">
+                                <span class="sun material-symbols-outlined">wb_sunny</span>
+                                <span>124석</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="seat 4관" onclick="chooseSeat(event)">
+                            <div class="clock">15:45</div>
+                            <div class="no">122석</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="seat 4관" onclick="chooseSeat(event)">
+                            <div class="clock">22:15</div>
+                            <div class="no">120석</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="type-hall">
+            <div class="info-hall">
+                <span class="room">▶ 2D</span>
+                <span>| 3관 8층</span>
+                <span>| 총 174석</span>
+            </div>
+            <div class="info-timetable">
+                <ul class="seats">
+                    <li>
+                        <div class="seat 2관" onclick="chooseSeat(event)">
+                            <div class="clock">09:00</div>
+                            <div class="no">
+                                <span class="sun material-symbols-outlined">wb_sunny</span>
+                                <span>174석</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="seat 2관" onclick="chooseSeat(event)">
+                            <div class="clock">11:45</div>
+                            <div class="no">172석</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="seat 2관" onclick="chooseSeat(event)">
+                            <div class="clock">14:30</div>
+                            <div class="no">164석</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="seat 2관" onclick="chooseSeat(event)">
+                            <div class="clock">17:20</div>
+                            <div class="no">124석</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="seat 2관" onclick="chooseSeat(event)">
+                            <div class="clock">20:10</div>
+                            <div class="no">131석</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="seat 2관" onclick="chooseSeat(event)">
+                            <div class="clock">24:00</div>
+                            <div class="no">
+                                <span class="night material-symbols-outlined">dark_mode</span>
+                                <span>154석</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container time">
+        <div class="col-times">
+            <img src="img/파묘.jpg" alt="" class="timeimage2">
+        </div>
+        <div class="info-movie">
+            <span class="i15">15</span>
+            <span class="title">파묘</span>
+            <span class="etc"><br>134분 / 2024.02.22 개봉</span>
+            <span class="onair">상영중</span>
+        </div>
+        <div class="type-hall">
+            <div class="info-hall">
+                <span class="room">▶ 2D</span>
+                <span>| 1관 6층</span>
+                <span>| 총 158석</span>
+            </div>
+            <div class="info-timetable">
+                <ul class="seats">
+                    <li>
+                        <div class="seat 4관" onclick="chooseSeat(event)">
+                            <div class="clock">10:00</div>
+                            <div class="no">
+                                <span class="sun material-symbols-outlined">wb_sunny</span>
+                                <span>34석</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="seat 4관" onclick="chooseSeat(event)">
+                            <div class="clock">12:40</div>
+                            <div class="no">51석</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="seat 4관" onclick="chooseSeat(event)">
+                            <div class="clock">15:30</div>
+                            <div class="no">20석</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="seat 4관" onclick="chooseSeat(event)">
+                            <div class="clock">18:10</div>
+                            <div class="no">76석</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="seat 2관" onclick="chooseSeat(event)">
+                            <div class="clock">23:45</div>
+                            <div class="no">
+                                <span class="night material-symbols-outlined">dark_mode</span>
+                                <span>154석</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="type-hall">
+            <div class="info-hall">
+                <span class="room">▶ 2D</span>
+                <span>| 5관 10층(Laser)</span>
+                <span>| 총 172석</span>
+            </div>
+            <div class="info-timetable">
+                <ul class="seats">
+                    <li>
+                        <div class="seat 2관" onclick="chooseSeat(event)">
+                            <div class="clock">09:10</div>
+                            <div class="no">
+                                <span class="sun material-symbols-outlined">wb_sunny</span>
+                                <span>84석</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="seat 2관" onclick="chooseSeat(event)">
+                            <div class="clock">12:00</div>
+                            <div class="no">31석</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="seat 2관" onclick="chooseSeat(event)">
+                            <div class="clock">14:45</div>
+                            <div class="no">10석</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="seat 2관" onclick="chooseSeat(event)">
+                            <div class="clock">17:30</div>
+                            <div class="no">21석</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="seat 2관" onclick="chooseSeat(event)">
+                            <div class="clock">20:20</div>
+                            <div class="no">46석</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="seat 2관" onclick="chooseSeat(event)">
+                            <div class="clock">23:10</div>
+                            <div class="no">
+                                <span class="night material-symbols-outlined">dark_mode</span>
+                                <span>144석</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container time">
+    <div class="col-times">
+        <span><img src="img/웡카.jpg" alt="" class="timeimage2"></span>
+    </div>
+    <div class="info-movie">
+        <span class="i11">ALL</span>
+            <span class="title">웡카</span>
+            <span class="etc"><br>116분 / 2024.01.31 개봉</span>
+            <span class="onair">상영중</span>
+    </div>
+    <div class="type-hall">
+        <div class="info-hall">
+            <span class="room">▶ 2D</span>
+            <span>| 2관[LCK관] 6층 (Laser)</span>
+            <span>| 총 124석</span>
+        </div>
+        <div class="info-timetable">
+            <ul class="seats">
+                <li>
+                    <div class="seat 4관" onclick="chooseSeat(event)">
+                        <div class="clock">16:50</div>
+                        <div class="no">43석</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="seat 4관" onclick="chooseSeat(event)">
+                        <div class="clock">19:25</div>
+                        <div class="no">91석</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="type-hall">
+        <div class="info-hall">
+            <span class="room">▶ 2D</span>
+            <span>| 6관 10층 (Laser)</span>
+            <span>| 총 124석</span>
+        </div>
+        <div class="info-timetable">
+            <ul class="seats">
+                <li>
+                    <div class="seat 2관" onclick="chooseSeat(event)">
+                        <div class="clock">08:30</div>
+                        <div class="no">
+                            <span class="sun material-symbols-outlined">wb_sunny</span>
+                            <span>93석</span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script>
+        window.onload = function () {
+            let title = localStorage.getItem('title')
+            let titleTag = document.querySelector('#title')
+            titleTag.innerHTML = title;
+        }
+        function chooseSeat(event) {
+            let seatElement = event.target.closest('.seat')
+            let classListArray = Array.from(seatElement.classList);
+            let room = classListArray[1]; // '2관' 클래스를 가져옴
+            let timeInfo = seatElement.querySelector('.clock').innerText
+            console.log('timeInfo:', timeInfo)
+            localStorage.setItem('room', room)
+            localStorage.setItem('time', timeInfo)
+            window.location.href = 'reserve.html';
+        }
+
+        function goHome() {
+            window.location.href = 'index.html'
+        }
+        function goMyPage() {
+            window.location.href = 'mypage.html'
+        }
+
+        let username = "";
+  document.addEventListener('DOMContentLoaded', function() {
+  username = localStorage.getItem('userName');
+
+  const loginContainer = document.querySelector('.log-in-icon');
+  if (username !== null)  {
+        document.getElementById('userWelcomeMessage').textContent =` ${username} 님` ;
+        document.getElementById('login-signup').innerHTML =
+`<li><a href = "MyPage.html">
+      <img 
+      src="https://img.cgv.co.kr/R2014/images/common/ico/loginMember.png" 
+      alt="MY Page">
+      <span>My Page</span>
+  </a>
+</li>`
+        userWelcomeMessage.style.cursor = 'default'; 
+        
+        
+    } else {  
+      document.getElementById('login-signup').innerHTML = `<li class="log-in-icon"><a href="Login.html">
+      <span class="logingone">
+      <img 
+      src="https://img.cgv.co.kr/R2014/images/common/ico/loginPassword.png" 
+      alt="로그인" class="login-img">
+      <span> Log in </span>
+      </span>
+  </a>
+</li>
+<li><a href = "SignUp.html">
+  <span class="signupgone"></span>
+  <img 
+  src="https://img.cgv.co.kr/R2014/images/common/ico/loginJoin.png" 
+  alt="회원가입">
+  <span>Sign up</span>
+   </a>
+</li>
+<li><a href = "MyPage.html">
+      <img 
+      src="https://img.cgv.co.kr/R2014/images/common/ico/loginMember.png" 
+      alt="MY Page">
+      <span>My Page</span>
+  </a>
+</li>`;
+
+    }
+  } 
+);
+
+    </script>
+</body>
+
+</html>

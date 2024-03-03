@@ -1,0 +1,122 @@
+.main-logo {text-align: center;
+    /* border: 1px solid red; */
+    margin:  auto;
+    margin-top: 80px;
+    }
+.main{
+    width: 330px;
+    /* background-color: gray; */
+    margin: 0 auto;
+    /* 가운데 정렬  */
+    /* border: 1px solid firebrick; */
+}
+.footer{
+    text-align: center;
+    font-size: 0.7rem;
+    margin-top: 0.8em;
+    color: #333;
+}
+#label{
+   padding-left: 15px;
+   font-size: 0.9em;
+    cursor: pointer;
+}
+label{ margin-left: 1.5em;
+}
+label span {
+    font-size: 11.5px;
+}
+/* 다시해보기 */
+/*
+label span::before{  border: 2px solid rgba(3, 0, 0, 0.445); content:''; display: inline-block; width: 17px; height: 17px; background-color:white;
+    background-image:url() ;
+ }
+/* 체크했을 때에 span 밑은 체크 안했을 때 span  */
+/* before 이나 after 은 display 나 content 주지 않으면 보이지 않는다 .  inline 으로 해야 일자로 된다. */
+/* #label{}:checked + span::before {  color: green;
+    content:':두꺼운_확인_표시:';
+}
+  */
+/* #checkBox{ appearance: none;} */
+ul{
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+}
+span input {
+    height: 40px;
+    width: 200px;
+    border: none;
+    background-color:rgb(233, 233, 233, 0.822);
+    padding-left: 14px;
+}
+span input:focus {
+    outline: none;
+}
+.error{
+    color: #E7223D;
+    padding: 8px;
+    display: none;
+    margin-top:-18px;
+    /*안쳤을 때 오류났을 때만 나오게 */
+    font-size: 12px;
+   margin-bottom: 0;
+}
+.id-area{
+    background-color: rgba(233, 233, 233, 0.822);
+    border: 1px solid  rgba(233, 233, 233, 0.822);
+    margin-right: 12px;
+    border-radius: 2em;
+    padding: 3px;
+    font-size: 12px;
+}
+.pw-area{
+    background-color:rgba(233, 233, 233, 0.822);
+    border: 1px solid  rgba(233, 233, 233, 0.822);
+    border-radius: 2em;
+    padding: 3px;
+    margin-right: 12px;
+    font-size: 12px;}
+#loginButton{
+    background-color : rgb(255,181,43);
+    border-radius: 0.3rem;
+    border: none;
+    width: 278px ;
+    height: 48;
+    /* 부모만큼 키우기  */
+    padding: 8px;
+    color: rgb(13, 29, 12);
+    box-shadow: 0 3px 4px rgb(255,181,43);
+    justify-content: center;
+}
+#loginButton:hover {
+    background-color: rgba(202, 169, 19, 0.911) ;
+    justify-content: center;
+   }
+.fa-regular{
+/* border: 1px solid #E7223D ; */
+margin-left: 1em;
+}
+.fa-solid{
+    margin-left: 1em;
+}
+.undernav{
+    text-align: center;
+    padding-top: 20px;
+}
+.undernav a {
+   font-size: 10px;
+   text-decoration: none ;
+   color: #11131496;
+   padding-left: 1em;
+   font-size: 0.5em;
+}
+.main {
+    width: 330px;
+    margin: 0 auto;  /* 수평 가운데 정렬 */
+    text-align: center; /* 내부 요소를 가로로 가운데 정렬 */
+}
+.main p{
+    text-align: left;
+}

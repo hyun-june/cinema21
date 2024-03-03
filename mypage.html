@@ -1,0 +1,267 @@
+<!-- 채연님 로그완료 페이지 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+       
+
+
+
+
+
+        /*header */
+        
+.Logo{
+  width: 180px;
+  margin-top: 20px;
+  margin-left: 3.5em;
+}
+
+
+
+.navbar-container {
+  font-family: 'Noto Sans KR', 'CJONLYONENEW', '맑은 고딕', '돋움', Dotum, sans-serif;
+  font-size: 100%;
+ 
+}
+
+.topNav{
+   float: right;
+   padding: 20px;
+  padding-top: 20px;
+}
+
+  
+.topNavbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.topNav li img {
+  width: 30px;
+  margin-right: 30px; /* 아이콘과 텍스트 사이의 간격을 조정합니다. */
+  margin-left: 10px;
+}
+
+.topNav li span {
+  padding:0 15 0 0px;
+  
+}
+
+.LogoStyle {
+  cursor: pointer;
+  margin-left: -8rem;
+}
+
+
+.topNav {
+  display: flex;
+  justify-content: center;
+  width: 60%;
+}
+
+.topNav li {
+  display: flex;
+  align-items: center; /* 아이콘과 텍스트를 수직 가운데 정렬합니다. */
+  padding: 1rem;
+}
+
+.topNav li img {
+  width: 30px;
+  height: 30px;
+}
+
+li a{
+  text-decoration: none;
+  color: black;
+}
+
+.footer-container {
+  width: 100%;
+  
+  font-size: 100%;
+  margin: 0 auto;
+  padding: 0;
+  border: 0;
+  background-color: black;
+  color: azure;
+  font-size: small;
+}
+
+.footerbar-list {
+  max-width: 980px;
+  margin-left: 3rem;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  border-bottom: 2px dashed aliceblue;
+  padding-bottom: 1rem;
+
+}
+
+.footerP {
+  width: 50%;
+  margin-left: 3rem;
+  padding-bottom: 1rem;
+
+}
+
+/* 새로운 CSS 코드 추가 */
+.container{
+  position: relative;
+}
+
+.user-welcome {
+        
+  font-size: 18px;
+  font-family:Arial, Helvetica, sans-serif;
+  white-space: nowrap; 
+  overflow: hidden; 
+
+}
+    </style>
+</head>
+<body>
+    <header class = "navbar-container container">    
+        <div class = "topNavbar"  id = "navbar" >
+            
+            
+    
+            <a href="index.html"><h2 class = "LogoStyle"><img class="Logo" src="img/cinema21.png" alt=""></h2></a>
+            <div class = "topNav-container">
+                
+                      
+    
+                        <ul class="topNav">                        
+                            <li><div id="userWelcomeMessage" class="user-welcome"></div></li>
+                            <div id="login-signup" class="login-signup"></div>
+                    </ul>
+             </div>
+        </div>
+    </header>
+    <section>
+    <div class="background-container">
+    </div>
+    <div class="container">
+        <div class="card">
+            <h1>My Page</h1>
+            <div id="welcomeMessage"></div>
+            <div id="reserve">예약현황</div>
+            <div id="title"></div>
+            <div id="room"></div>
+            <div id="time"></div>
+            <div id="seat"></div>
+            <button class="btn btn-primary" onclick="goHome()">Home으로</button>
+        </div>
+    </div>
+</section>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script>
+        let username = "";
+        let title;
+        let room;
+        let time;
+        let seat;
+        // 페이지가 로드될 때 저장된 정보가 있는지 확인하고 필요한 경우 로그인 정보를 채움
+        window.onload = function () {
+            if(localStorage.getItem('userName')===null){
+                alert('로그인 페이지로 이동합니다.');
+                location.href="login.html";
+            }else{
+            username = localStorage.getItem('userName')
+            title = localStorage.getItem('title');
+            room = localStorage.getItem('room')
+            time = localStorage.getItem('time')
+            seat = localStorage.getItem('data')
+            if (username) {
+                document.getElementById('welcomeMessage').innerText = username + '님 반갑습니다.';
+            } else {
+                document.getElementById('welcomeMessage').innerText = '반갑습니다.';
+            }
+            if (title) {
+                document.querySelector('#title').innerText = `영화 title : ${title}`;
+            }
+            if (room) {
+                document.querySelector('#room').innerText = `상영관 : ${room}`;
+            }
+            if (time) {
+                document.querySelector('#time').innerText = `상영시간 : ${time}`;
+            }
+            if (seat) {
+                document.querySelector('#seat').innerText = `예약좌석: ${seat}`;
+            }
+            }
+        };
+
+        function goHome() {
+            window.location.href = 'index.html'
+        }
+
+        
+             
+              document.addEventListener('DOMContentLoaded', function() {
+              username = localStorage.getItem('userName');
+            
+              const loginContainer = document.querySelector('.log-in-icon');
+              if (username !== null)  {
+                    document.getElementById('userWelcomeMessage').textContent =` ${username} 님` ;
+                    document.getElementById('login-signup').innerHTML =
+            `<li><a href = "MyPage.html">
+                  <img 
+                  src="https://img.cgv.co.kr/R2014/images/common/ico/loginMember.png" 
+                  alt="MY Page">
+                  <span>My Page</span>
+              </a>
+            </li>`
+                    userWelcomeMessage.style.cursor = 'default'; 
+
+
+                } else {  
+                  document.getElementById('login-signup').innerHTML = `<li class="log-in-icon"><a href="Login.html">
+                  <span class="logingone">
+                  <img 
+                  src="https://img.cgv.co.kr/R2014/images/common/ico/loginPassword.png" 
+                  alt="로그인" class="login-img">
+                  <span> Log in </span>
+                  </span>
+              </a>
+            </li>
+            <li><a href = "SignUp.html">
+              <span class="signupgone"></span>
+              <img 
+              src="https://img.cgv.co.kr/R2014/images/common/ico/loginJoin.png" 
+              alt="회원가입">
+              <span>Sign up</span>
+               </a>
+            </li>
+            <li><a href = "MyPage.html">
+                  <img 
+                  src="https://img.cgv.co.kr/R2014/images/common/ico/loginMember.png" 
+                  alt="MY Page">
+                  <span>My Page</span>
+              </a>
+            </li>`;
+
+                }
+              } 
+            );
+
+
+
+        
+
+        
+    </script>
+</body>
+</html>
