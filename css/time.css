@@ -3,7 +3,10 @@
     margin-top: 15px;
     margin-left: 4em;
 }
-
+.login-signup{
+    display: flex;
+    list-style-type: none; /* 리스트 스타일 제거 */
+  }
 .Logo:hover{
     cursor: pointer;
 }
